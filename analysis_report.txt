@@ -1,0 +1,49 @@
+
+================================================================================
+        GUT-DIET-MOOD ML PROJECT: ANALYSIS REPORT
+================================================================================
+
+1. DATASET SUMMARY
+   - Samples: 17170
+   - Features: 4776 (microbiome + diet)
+   - Target: Binary mood/stress classification
+
+2. MODEL PERFORMANCE
+                     Accuracy   ROC-AUC
+Logistic (Diet)      0.405269  0.504691
+Logistic (Microbe)   0.366785  0.582503
+Logistic (Both)      0.399645  0.598852
+RandomForest (Both)  0.424808  0.595632
+XGBoost (Both)       0.433689  0.606995
+
+   Best Model: XGBoost (Both features)
+   - Accuracy: 0.434
+   - ROC-AUC: 0.607
+
+3. KEY FINDINGS
+   Top 5 Predictive Features:
+                0
+158967   0.004008
+4424111  0.003144
+4411295  0.003075
+288690   0.002050
+178893   0.001744
+
+4. HYPOTHESIS VALIDATION
+   H1 (Fiber → Better Mood): ❌ Not strongly supported
+   H2 (UPF → Worse Mood): ❌ Needs further analysis
+   H3 (Personalization): Requires per-subject modeling (future work)
+
+5. LIMITATIONS
+   - Observational data (no causality)
+   - Self-reported diet (measurement error)
+   - Synthetic target (if real mood data unavailable)
+   - Cross-sectional (no temporal dynamics)
+
+6. RECOMMENDATIONS
+   - Validate with prospective cohort
+   - Add longitudinal data (repeated measures)
+   - Test causal interventions (fiber supplementation)
+   - Personalize models per individual
+
+================================================================================
